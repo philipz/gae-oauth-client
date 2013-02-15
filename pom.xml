@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.vertigrated</groupId>
-    <artifactId>gae-cms-tools</artifactId>
+    <artifactId>gae-oauth-client</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>gaecmstools</name>
+    <name>gaeoauthclient</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,11 +24,6 @@
             <groupId>com.martiansoftware</groupId>
             <artifactId>jsap</artifactId>
             <version>2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.antlr</groupId>
-            <artifactId>ST4</artifactId>
-            <version>4.0.7</version>
         </dependency>
         <dependency>
             <groupId>com.google.http-client</groupId>
@@ -59,21 +54,7 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <!-- Remove or comment out the maven-shade-plugin and comment to make the .jar file executable using normal jar archiver -->
-            <!-- plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin -->
-            
+        <plugins>           
             <!-- Create self contained uber-jar of all dependencies for simple distribution -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
